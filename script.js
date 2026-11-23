@@ -43,7 +43,7 @@ function catName(c){return categoryRu[c]||c}
 function get(id){return products.find(p=>p.id===id)}
 function selectedProducts(){return Object.values(state.selected).map(get).filter(Boolean)}
 function total(){return selectedProducts().reduce((s,p)=>s+p.price,0)}
-function showScreen(id){document.querySelectorAll('.screen').forEach(x=>x.classList.toggle('active',x.id===id));document.querySelectorAll('.nav button[data-screen]').forEach(x=>x.classList.toggle('active',x.dataset.screen===id));if(id==='catalog')renderCatalog();if(id==='build')renderBuild();if(id==='compat')renderCompatibility();if(id==='final')renderFinal();if(id==='assembly')renderAssembly();updateDashboard()}
+function showScreen(id){document.querySelectorAll('.screen').forEach(x=>x.classList.toggle('active',x.id===id));document.querySelectorAll('.nav button[data-screen]').forEach(x=>x.classList.toggle('active',x.dataset.screen===id));if(id==='catalog')renderCatalog();if(id==='build')renderBuild();if(id==='compat')renderCompatibility();if(id==='final')renderFinal();if(id==='assembly')renderAssembly();if(id==='laptops')renderLaptops();updateDashboard()}
 function toast(msg){let t=document.getElementById('toast');t.textContent=msg;t.style.display='block';setTimeout(()=>t.style.display='none',2400)}
 function startGame(){state.started=true;state.chapter=0;document.getElementById('welcome').classList.add('hidden');document.getElementById('storyContent').classList.remove('hidden');renderChapter();saveGame(false)}
 function continueGame(){let saved=localStorage.getItem('buildYourPcSave');if(saved){try{state={...state,...JSON.parse(saved)};document.getElementById('welcome').classList.add('hidden');document.getElementById('storyContent').classList.remove('hidden');renderChapter();updateDashboard();toast('Сохранение загружено.')}catch(e){toast('Не удалось прочитать сохранение.')}}else toast('Сохранение пока не найдено.')}
@@ -88,3 +88,4 @@ function toggleFullscreen(){if(!document.fullscreenElement)document.documentElem
 function toggleSound(){state.sound=!state.sound;document.getElementById('soundBtn').textContent='♪ Звук: '+(state.sound?'Вкл.':'Выкл.');toast('Звуковые эффекты '+(state.sound?'включены':'выключены')+'. (Аудиофайлы не входят в проект.)');saveGame(false)}
 renderCatalog();renderBuild();renderCompatibility();renderAssembly();updateDashboard();
 if(localStorage.getItem('buildYourPcSave'))document.querySelector('button[onclick="continueGame()"]').textContent='Продолжить сохранённую игру';
+function renderLaptops(){document.querySelectorAll('#laptops .laptop-card').forEach(card=>card.classList.add('laptop-ready'));}
