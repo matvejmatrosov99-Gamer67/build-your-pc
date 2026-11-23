@@ -22,6 +22,7 @@
   <button data-screen="compat" onclick="showScreen('compat')"><span class="num">04</span> Совместимость</button>
   <button data-screen="assembly" onclick="showScreen('assembly')"><span class="num">05</span> Мастерская сборки</button>
   <button data-screen="final" onclick="showScreen('final')"><span class="num">06</span> Финальный тест</button>
+  <button data-screen="laptops" onclick="showScreen('laptops')"><span class="num">07</span> Ноутбук для учёбы</button>
  </nav>
  <div class="section-label">Главы истории</div>
  <div id="chapterNav" class="nav"></div>
@@ -72,7 +73,17 @@
 <section id="final" class="screen">
  <div class="eyebrow">Момент истины</div><h2 class="title">Финальная проверка системы</h2><div id="finalContent" class="card"><p class="muted">Заверши подбор комплектующих и сборку, чтобы запустить виртуальную проверку.</p><button class="primary" onclick="runTest()">Запустить проверку системы</button></div>
 </section>
-</main>
+<section id="laptops" class="screen">
+<div class="eyebrow">Подбор мобильного компьютера</div><h2 class="title">Ноутбук для учёбы</h2>
+<p class="muted">Ориентиры для выбора ноутбука под конспекты, браузер, видеозвонки, презентации и учебные программы. Ссылки открывают поиск в DNS; цены и наличие проверяй перед покупкой.</p>
+<div class="grid2 laptop-grid">
+<article class="card laptop-card"><div class="product-art">📚</div><span class="tag">Базовый вариант</span><h3>Школа и повседневные задачи</h3><p class="muted small">Документы, браузер, электронный дневник и онлайн-уроки.</p><ul><li>Intel Core i3 или AMD Ryzen 3</li><li>ОЗУ: желательно 8–16 ГБ</li><li>SSD: от 256 ГБ</li><li>Экран: 14–15,6″, Full HD</li></ul><a target="_blank" rel="noopener" href="https://www.dns-shop.ru/search/?q=ноутбук+16гб+ssd+256гб">Найти в DNS →</a></article>
+<article class="card laptop-card"><div class="product-art">💻</div><span class="tag">Оптимальный выбор</span><h3>Для учёбы на несколько лет</h3><p class="muted small">Многозадачность, офисные программы, видеосвязь и лёгкое программирование.</p><ul><li>Intel Core i5 или AMD Ryzen 5</li><li>ОЗУ: 16 ГБ</li><li>SSD: 512 ГБ</li><li>Экран: IPS Full HD</li></ul><a target="_blank" rel="noopener" href="https://www.dns-shop.ru/search/?q=ноутбук+ryzen+5+16гб+512гб">Найти в DNS →</a></article>
+<article class="card laptop-card"><div class="product-art">🧑‍💻</div><span class="tag">Для технических предметов</span><h3>Программирование и проекты</h3><p class="muted small">Для IDE, виртуальных машин, 3D-редакторов и больших проектов.</p><ul><li>Intel Core i5/i7 или AMD Ryzen 5/7</li><li>ОЗУ: 16–32 ГБ</li><li>SSD: желательно 1 ТБ</li><li>IPS-экран и хорошее охлаждение</li></ul><a target="_blank" rel="noopener" href="https://www.dns-shop.ru/search/?q=ноутбук+32гб+ssd+1тб">Найти в DNS →</a></article>
+<article class="card laptop-card"><div class="product-art">🔋</div><span class="tag">Для занятий вне дома</span><h3>Лёгкий и автономный</h3><p class="muted small">Если часто носишь ноутбук с собой, важны вес, батарея и экран.</p><ul><li>Вес: ориентир до 1,5–1,7 кг</li><li>Автономность: смотри независимые обзоры</li><li>ОЗУ: предпочтительно 16 ГБ</li><li>USB-A, USB-C, HDMI — по потребности</li></ul><a target="_blank" rel="noopener" href="https://www.dns-shop.ru/search/?q=легкий+ноутбук+16гб">Найти в DNS →</a></article>
+</div>
+<div class="card laptop-check"><div class="eyebrow">Перед покупкой</div><h3>Чек-лист выбора</h3><ul><li>Проверь, хватит ли объёма ОЗУ и можно ли её расширить.</li><li>Уточни тип экрана, яркость и наличие матового покрытия.</li><li>Проверь клавиатуру, веб-камеру, микрофон и Wi-Fi.</li><li>Уточни, какая ОС установлена и нужна ли лицензия отдельно.</li><li>Сравни вес, гарантию, возврат и реальные тесты автономности.</li></ul><p class="small muted">Для большинства школьных и офисных задач отдельная игровая видеокарта не обязательна. Часто полезнее вложиться в экран, 16 ГБ ОЗУ и SSD.</p></div>
+</section></main>
 <aside class="panel rightbar">
  <div class="section-label">Сводка сборки</div><div class="rightbar-inner">
  <div class="stat"><small>Остаток бюджета</small><b id="sideBudget">1 200 €</b></div>
