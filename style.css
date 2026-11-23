@@ -26,3 +26,5 @@ a{color:var(--cyan)}.app{max-width:1440px;margin:auto;padding:18px}.top{display:
 @keyframes floatScene{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-12px) rotate(4deg)}}
 @keyframes scan{to{transform:translateX(100%)}}
 @media(max-width:700px){.scene-backdrop{min-height:210px;padding:20px}.scene-symbol{font-size:68px;right:8%;top:25px}.scene-actions button{flex:1}.cinematic-welcome{min-height:unset}}
+/* Study laptop section */
+.laptop-grid{margin-top:18px}.laptop-card{display:flex;flex-direction:column;align-items:flex-start;min-height:100%}.laptop-card .product-art{width:100%;height:125px}.laptop-card ul,.laptop-check ul{padding-left:20px;color:var(--muted);font-size:13px}.laptop-card li,.laptop-check li{margin:6px 0}.laptop-card a{display:inline-block;margin-top:auto;padding-top:14px;font-weight:700;text-decoration:none}.laptop-card a:hover{text-decoration:underline}.laptop-check{margin-top:16px}.laptop-check h3{margin-bottom:8px}
